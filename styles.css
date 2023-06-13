@@ -1,13 +1,18 @@
+@font-face {
+    font-family: Roboto;
+    src: url(fonts/Roboto/Roboto-Regular.ttf);
+}
+
 body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Arial;
+    font-family: Roboto;
 }
 
 .container {
     display: grid;
-    grid-template-rows: 0px 80px 90px 900px;
+    grid-template-rows: 0fr 0fr 0fr 10fr;
     grid-template-columns: 1fr 4fr;
 }
 
@@ -18,7 +23,7 @@ body {
 
 .nav {
     display: grid;
-    grid-template-columns: 2.5fr 1.5fr;
+    grid-template-columns: 0fr 2fr 1fr;
     grid-row: 1;
     grid-column: 2 / 3;
     align-items: center;
@@ -33,7 +38,8 @@ body {
 }
 
 .subnav-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 15fr;
     grid-row: 3 / 4;
     grid-column: 2 / 3;
     padding: 5px 30px;
@@ -63,7 +69,7 @@ button {
 
 .subnav-side {
     display: grid;
-    grid-template-columns: 100px 100px 100px;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
@@ -92,8 +98,8 @@ h3, h1, .header-3 {
 
 .p-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 10px;
 }
 
